@@ -8,6 +8,23 @@
 
 #import <Foundation/Foundation.h>
 
+#import <RestKit/RestKit.h>
+
+
+
 @interface RMRestGateway : NSObject
+
+@property (nonatomic, strong) NSArray *venues;
+
+@property (nonatomic, strong) NSURL *baseURL;
+@property (nonatomic, strong) AFHTTPClient *client;
+@property (nonatomic, strong) RKObjectManager *objectManager;
+
+@property (nonatomic, strong, readonly) NSArray *entitiesArray;
+
+- (void)checkForUpdates: (NSNumber *) timestamp
+internetConnectionError: (void (^)(void)) internetConnectionError
+           code404Error: (void (^)(void)) code404Error
+      noUpdatesAtServer: (void (^)(void)) noUpdatesAtServer;
 
 @end

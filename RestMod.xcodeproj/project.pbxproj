@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A77B45A226BDFC337594F03 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E87559AFB8B0770095C580CF /* libPods.a */; };
 		7E7C88FE1A0038D0001CC005 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7C88FD1A0038D0001CC005 /* UIKit.framework */; };
 		7E7C89001A0038D0001CC005 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7C88FF1A0038D0001CC005 /* Foundation.framework */; };
 		7E7C89021A0038D0001CC005 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7C89011A0038D0001CC005 /* CoreGraphics.framework */; };
@@ -27,6 +28,10 @@
 		7E7C892D1A0038D1001CC005 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7C89031A0038D0001CC005 /* CoreData.framework */; };
 		7E7C89351A0038D1001CC005 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E7C89331A0038D1001CC005 /* InfoPlist.strings */; };
 		7E7C89381A0038D1001CC005 /* RestModTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7C89371A0038D1001CC005 /* RestModTests.m */; };
+		7E81B5631A0772D3002221D4 /* RMDataMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E81B55E1A0772D3002221D4 /* RMDataMapping.m */; };
+		7E81B5641A0772D3002221D4 /* RMEntityMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E81B5601A0772D3002221D4 /* RMEntityMapping.m */; };
+		7E81B5651A0772D3002221D4 /* RMStatusMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E81B5621A0772D3002221D4 /* RMStatusMapping.m */; };
+		7E8305DA1A015DC5000326FD /* RMRestGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8305D91A015DC5000326FD /* RMRestGateway.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +71,17 @@
 		7E7C89341A0038D1001CC005 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7E7C89361A0038D1001CC005 /* RestModTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RestModTests.h; sourceTree = "<group>"; };
 		7E7C89371A0038D1001CC005 /* RestModTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RestModTests.m; sourceTree = "<group>"; };
+		7E81B55D1A0772D2002221D4 /* RMDataMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDataMapping.h; sourceTree = "<group>"; };
+		7E81B55E1A0772D3002221D4 /* RMDataMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDataMapping.m; sourceTree = "<group>"; };
+		7E81B55F1A0772D3002221D4 /* RMEntityMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMEntityMapping.h; sourceTree = "<group>"; };
+		7E81B5601A0772D3002221D4 /* RMEntityMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMEntityMapping.m; sourceTree = "<group>"; };
+		7E81B5611A0772D3002221D4 /* RMStatusMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMStatusMapping.h; sourceTree = "<group>"; };
+		7E81B5621A0772D3002221D4 /* RMStatusMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMStatusMapping.m; sourceTree = "<group>"; };
+		7E8305D81A015DC5000326FD /* RMRestGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMRestGateway.h; sourceTree = "<group>"; };
+		7E8305D91A015DC5000326FD /* RMRestGateway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMRestGateway.m; sourceTree = "<group>"; };
+		7ECE8F57BE1EF4A8E4F0F971 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7F9FCE9C72EDDC3B5B39DCC7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E87559AFB8B0770095C580CF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +93,7 @@
 				7E7C89001A0038D0001CC005 /* Foundation.framework in Frameworks */,
 				7E7C89021A0038D0001CC005 /* CoreGraphics.framework in Frameworks */,
 				7E7C89041A0038D0001CC005 /* CoreData.framework in Frameworks */,
+				3A77B45A226BDFC337594F03 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +118,7 @@
 				7E7C89301A0038D1001CC005 /* RestModTests */,
 				7E7C88FC1A0038D0001CC005 /* Frameworks */,
 				7E7C88FB1A0038D0001CC005 /* Products */,
+				8E0121A6A227F7550497C8FD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +139,7 @@
 				7E7C89011A0038D0001CC005 /* CoreGraphics.framework */,
 				7E7C89031A0038D0001CC005 /* CoreData.framework */,
 				7E7C89291A0038D1001CC005 /* SenTestingKit.framework */,
+				E87559AFB8B0770095C580CF /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -128,6 +147,7 @@
 		7E7C89051A0038D0001CC005 /* RestMod */ = {
 			isa = PBXGroup;
 			children = (
+				7E8305D51A015D8C000326FD /* Sourses */,
 				7E7C890E1A0038D0001CC005 /* RMAppDelegate.h */,
 				7E7C890F1A0038D0001CC005 /* RMAppDelegate.m */,
 				7E7C89171A0038D1001CC005 /* MainStoryboard.storyboard */,
@@ -174,6 +194,54 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7E81B55C1A0772D2002221D4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7E81B55D1A0772D2002221D4 /* RMDataMapping.h */,
+				7E81B55E1A0772D3002221D4 /* RMDataMapping.m */,
+				7E81B55F1A0772D3002221D4 /* RMEntityMapping.h */,
+				7E81B5601A0772D3002221D4 /* RMEntityMapping.m */,
+				7E81B5611A0772D3002221D4 /* RMStatusMapping.h */,
+				7E81B5621A0772D3002221D4 /* RMStatusMapping.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7E8305D51A015D8C000326FD /* Sourses */ = {
+			isa = PBXGroup;
+			children = (
+				7E8305D61A015D8C000326FD /* CORE */,
+			);
+			path = Sourses;
+			sourceTree = "<group>";
+		};
+		7E8305D61A015D8C000326FD /* CORE */ = {
+			isa = PBXGroup;
+			children = (
+				7E8305D71A015D8C000326FD /* REST */,
+			);
+			path = CORE;
+			sourceTree = "<group>";
+		};
+		7E8305D71A015D8C000326FD /* REST */ = {
+			isa = PBXGroup;
+			children = (
+				7E81B55C1A0772D2002221D4 /* Models */,
+				7E8305D81A015DC5000326FD /* RMRestGateway.h */,
+				7E8305D91A015DC5000326FD /* RMRestGateway.m */,
+			);
+			path = REST;
+			sourceTree = "<group>";
+		};
+		8E0121A6A227F7550497C8FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F9FCE9C72EDDC3B5B39DCC7 /* Pods.debug.xcconfig */,
+				7ECE8F57BE1EF4A8E4F0F971 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -181,9 +249,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E7C893B1A0038D1001CC005 /* Build configuration list for PBXNativeTarget "RestMod" */;
 			buildPhases = (
+				655333EE4A4B8CCC688EE524 /* Check Pods Manifest.lock */,
 				7E7C88F61A0038D0001CC005 /* Sources */,
 				7E7C88F71A0038D0001CC005 /* Frameworks */,
 				7E7C88F81A0038D0001CC005 /* Resources */,
+				B089ECAFEF5C3B37B8994E89 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,6 +335,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		655333EE4A4B8CCC688EE524 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		7E7C89261A0038D1001CC005 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,6 +363,21 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		B089ECAFEF5C3B37B8994E89 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -290,6 +390,10 @@
 				7E7C891C1A0038D1001CC005 /* RestMod.xcdatamodeld in Sources */,
 				7E7C891F1A0038D1001CC005 /* RMMasterViewController.m in Sources */,
 				7E7C89221A0038D1001CC005 /* RMDetailViewController.m in Sources */,
+				7E8305DA1A015DC5000326FD /* RMRestGateway.m in Sources */,
+				7E81B5631A0772D3002221D4 /* RMDataMapping.m in Sources */,
+				7E81B5641A0772D3002221D4 /* RMEntityMapping.m in Sources */,
+				7E81B5651A0772D3002221D4 /* RMStatusMapping.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +501,7 @@
 		};
 		7E7C893C1A0038D1001CC005 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F9FCE9C72EDDC3B5B39DCC7 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RestMod/RestMod-Prefix.pch";
@@ -408,6 +513,7 @@
 		};
 		7E7C893D1A0038D1001CC005 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ECE8F57BE1EF4A8E4F0F971 /* Pods.release.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RestMod/RestMod-Prefix.pch";
@@ -470,6 +576,7 @@
 				7E7C893D1A0038D1001CC005 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E7C893E1A0038D1001CC005 /* Build configuration list for PBXNativeTarget "RestModTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +585,7 @@
 				7E7C89401A0038D1001CC005 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

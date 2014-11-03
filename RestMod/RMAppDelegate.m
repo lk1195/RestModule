@@ -10,6 +10,8 @@
 
 #import "RMMasterViewController.h"
 
+#import <RestKit/RestKit.h>
+
 @implementation RMAppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;

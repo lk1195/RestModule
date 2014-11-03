@@ -10,6 +10,8 @@
 
 #import "RMDetailViewController.h"
 
+#import "RMRestGateway.h"
+
 @interface RMMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @end
@@ -29,7 +31,27 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    RMRestGateway *gateway = [[RMRestGateway alloc] init];
+    
+    NSNumber *timestamp = [[NSNumber alloc] initWithInt:2012555678];
+    
+    [gateway checkForUpdates:timestamp
+     internetConnectionError:internetConnectionError
+                code404Error:code404Error
+           noUpdatesAtServer:noUpdatesAtServer];
+
 }
+
+void (^internetConnectionError)(void) = ^{
+    NSLog(@"This is a block");
+};
+void (^code404Error)(void) = ^{
+    NSLog(@"This is a block");
+};
+void (^noUpdatesAtServer)(void) = ^{
+    NSLog(@"Sorry, there are no updates");
+};
 
 - (void)didReceiveMemoryWarning
 {
@@ -55,6 +77,7 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
+    
 }
 
 #pragma mark - Table View
