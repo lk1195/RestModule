@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) NSNumber *id;
 @property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) NSString *description;
 @property (strong, nonatomic) NSString *order;
 @property (strong, nonatomic) NSString *icon;
 @property (strong, nonatomic) NSNumber *parent_id;

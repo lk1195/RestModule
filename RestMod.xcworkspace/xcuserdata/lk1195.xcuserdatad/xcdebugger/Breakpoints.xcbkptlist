@@ -8,12 +8,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "RestMod/Sourses/CORE/REST/RMRestGateway.m"
-         timestampString = "436696686.229465"
+         timestampString = "436698261.964808"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "74"
          endingLineNumber = "74"
-         landmarkName = "-checkForUpdates:internetConnectionError:code404Error:noUpdatesAtServer:"
+         landmarkName = "-checkUpdatesForTimestamp:internetConnectionError:code404Error:noUpdatesAtServer:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "RestMod/Sourses/CORE/REST/RMRestGateway.m"
-         timestampString = "436696686.229465"
+         timestampString = "436698261.964808"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "107"
-         endingLineNumber = "107"
+         startingLineNumber = "111"
+         endingLineNumber = "111"
          landmarkName = "@implementation RMRestGateway"
          landmarkType = "3">
       </FileBreakpoint>
@@ -34,12 +34,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "RestMod/Sourses/CORE/REST/RMRestGateway.m"
-         timestampString = "436696686.229465"
+         timestampString = "436698261.964808"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "112"
-         endingLineNumber = "112"
-         landmarkName = "-getUpdates:"
+         startingLineNumber = "116"
+         endingLineNumber = "116"
+         landmarkName = "-getUpdates"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -47,12 +47,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "RestMod/Sourses/CORE/REST/RMRestGateway.m"
-         timestampString = "436696686.229465"
+         timestampString = "436698261.964808"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "79"
          endingLineNumber = "79"
-         landmarkName = "-checkForUpdates:internetConnectionError:code404Error:noUpdatesAtServer:"
+         landmarkName = "-checkUpdatesForTimestamp:internetConnectionError:code404Error:noUpdatesAtServer:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -60,12 +60,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "RestMod/Sourses/CORE/REST/RMRestGateway.m"
-         timestampString = "436696686.229465"
+         timestampString = "436698261.964808"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "78"
          endingLineNumber = "78"
-         landmarkName = "-checkForUpdates:internetConnectionError:code404Error:noUpdatesAtServer:"
+         landmarkName = "-checkUpdatesForTimestamp:internetConnectionError:code404Error:noUpdatesAtServer:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -73,12 +73,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "RestMod/Sourses/CORE/REST/RMRestGateway.m"
-         timestampString = "436696686.229465"
+         timestampString = "436698261.964808"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "77"
          endingLineNumber = "77"
-         landmarkName = "-checkForUpdates:internetConnectionError:code404Error:noUpdatesAtServer:"
+         landmarkName = "-checkUpdatesForTimestamp:internetConnectionError:code404Error:noUpdatesAtServer:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -123,12 +123,51 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "RestMod/Sourses/CORE/REST/RMRestGateway.m"
-         timestampString = "436696686.229465"
+         timestampString = "436698261.964808"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "83"
-         endingLineNumber = "83"
-         landmarkName = "-checkForUpdates:internetConnectionError:code404Error:noUpdatesAtServer:"
+         startingLineNumber = "82"
+         endingLineNumber = "82"
+         landmarkName = "-checkUpdatesForTimestamp:internetConnectionError:code404Error:noUpdatesAtServer:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "RestMod/Sourses/CORE/REST/RMRestGateway.m"
+         timestampString = "436698261.964808"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "121"
+         endingLineNumber = "121"
+         landmarkName = "-getUpdates"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "RestMod/Sourses/CORE/REST/RMRestGateway.m"
+         timestampString = "436698261.964808"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "98"
+         endingLineNumber = "98"
+         landmarkName = "-switchStatus:code404Error:noUpdatesAtServer:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "RestMod/Sourses/CORE/REST/RMRestGateway.m"
+         timestampString = "436698261.964808"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "114"
+         endingLineNumber = "114"
+         landmarkName = "-getUpdates"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

@@ -70,6 +70,7 @@ internetConnectionError: (void (^)(void)) internetConnectionError
 {
     
     [self configureForUpdateStatus];
+    self.timestamp = timestamp;
     
     NSDictionary *queryParams = @{@"timestamp" : timestamp};
     
@@ -78,13 +79,12 @@ internetConnectionError: (void (^)(void)) internetConnectionError
                                               success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
                                                   
                                                   RMStatusMapping *statusMapping = [mappingResult.array objectAtIndex:0];
-                                                  
-                                                  
+                                                  [self switchStatus:statusMapping code404Error:code404Error noUpdatesAtServer:noUpdatesAtServer];                                                  
                                                   
                                               }
      
                                               failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                                                  internetConnectionError();
+                                                  internetConnectionError(); // if error while connecting server
                                               }];
     
 }
@@ -92,32 +92,33 @@ internetConnectionError: (void (^)(void)) internetConnectionError
 - (void)switchStatus: (RMStatusMapping *) statusMapping
         code404Error: (void (^)(void)) code404Error
    noUpdatesAtServer: (void (^)(void)) noUpdatesAtServer
-              update: (void (^)(void)) update
 {
+    
+    // if 404 error at server
     if([statusMapping.status isEqualToNumber:@400]){
         code404Error();
         return;
     }
     
     if([statusMapping.result isEqual: @"full"]){
-        [self getUpdates:timestamp];
+        [self getUpdates];
     } else if([statusMapping.result isEqual: @"part"]){
-        [self getUpdates:timestamp];
+        [self getUpdates];
     } else if([statusMapping.result isEqual: @"none"]){
         noUpdatesAtServer();
     }
 }
 
-- (void) getUpdates: (NSNumber *) timestamp
+- (void) getUpdates
 {
     [self configureForUpdate];
     
-    NSDictionary *queryParams = @{@"timestamp" : timestamp};
+    NSDictionary *queryParams = @{@"timestamp" : self.timestamp};
     
     [[RKObjectManager sharedManager] getObjectsAtPath:@"/api/get_last_updates_for_time"
                                            parameters:queryParams
                                               success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                                  NSArray *entities = mappingResult.array;
+                                                  NSArray *entities = mappingResult.array;                                                  
                                               }
                                               failure:^(RKObjectRequestOperation *operation, NSError *error) {
                                                   

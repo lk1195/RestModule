@@ -34,12 +34,12 @@
     
     RMRestGateway *gateway = [[RMRestGateway alloc] init];
     
-    NSNumber *timestamp = [[NSNumber alloc] initWithInt:2012555678];
+    NSNumber *timestamp = [[NSNumber alloc] initWithInt:1112695878];
     
-    [gateway checkForUpdates:timestamp
-     internetConnectionError:internetConnectionError
-                code404Error:code404Error
-           noUpdatesAtServer:noUpdatesAtServer];
+    [gateway checkUpdatesForTimestamp:timestamp
+              internetConnectionError:internetConnectionError
+                         code404Error:code404Error
+                    noUpdatesAtServer:noUpdatesAtServer];
 
 }
 

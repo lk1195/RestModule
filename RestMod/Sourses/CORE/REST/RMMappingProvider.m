@@ -19,7 +19,18 @@
     [entityMapping addAttributeMappingsFromDictionary:@{@"entity": @"entity"} ];
     
     RKObjectMapping *dataMapping = [RKObjectMapping mappingForClass:[RMDataMapping class]];
-    [dataMapping addAttributeMappingsFromDictionary:@{@"title": @"title"} ];
+    NSDictionary *attributesMappings = @{@"id": @"id",
+                                         @"title": @"title",
+                                         @"description":@"description",
+                                         @"order":@"order",
+                                         @"icon":@"icon",
+                                         @"parent_id":@"parent_id",
+                                         @"created_at":@"created_at",
+                                         @"updated_at":@"updated_at",
+                                         @"lft":@"lft",
+                                         @"rgt":@"rgt"};
+    
+    [dataMapping addAttributeMappingsFromDictionary:attributesMappings];
     
     //[entityMapping mapKeyPath:@"data" toRelationship:@"dataArray" withMapping:dataMapping];
     
