@@ -11,6 +11,8 @@
 #import "RMEntityMapping.h"
 #import "RMDataMapping.h"
 
+#import "RMMappingProvider.h"
+
 #define BASE_URL @"http://mpm.head-system.com/"
 #define PATH_TO_CHECK_UPDATES @"/api/get_updates"
 
@@ -32,15 +34,11 @@
     return self;
 }
 
+#pragma mark configure response descriptors
 - (void)configureForUpdateStatus
 {
-    // setup object mappings
-    RKObjectMapping *statusMapping = [RKObjectMapping mappingForClass:[RMStatusMapping class]];
-    [statusMapping addAttributeMappingsFromArray:@[@"status", @"result"]];
-    
-    // register mappings with the provider using a response descriptor
     RKResponseDescriptor *responseDescriptor =
-    [RKResponseDescriptor responseDescriptorWithMapping:statusMapping
+    [RKResponseDescriptor responseDescriptorWithMapping:[RMMappingProvider statusMapping]
                                                  method:RKRequestMethodGET
                                             pathPattern:@"api/get_updates"
                                                 keyPath:nil
@@ -49,26 +47,12 @@
     [self.objectManager addResponseDescriptor:responseDescriptor];
 }
 
-- (void)configureForUpdate
-{    
-    // setup object mappings
-    RKObjectMapping *entityMapping = [RKObjectMapping mappingForClass:[RMEntityMapping class]];
-    [entityMapping addAttributeMappingsFromDictionary:@{@"entity": @"entity"} ];
-    
-    RKObjectMapping *dataMapping = [RKObjectMapping mappingForClass:[RMDataMapping class]];
-    [dataMapping addAttributeMappingsFromDictionary:@{@"title": @"title"} ];
-    
-    //[entityMapping mapKeyPath:@"data" toRelationship:@"dataArray" withMapping:dataMapping];
-    
-    [entityMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"data"
-                                                                                   toKeyPath:@"dataArray"
-                                                                                 withMapping:dataMapping]];
-    
 
-    
+- (void)configureForUpdate
+{
     // register mappings with the provider using a response descriptor
     RKResponseDescriptor *responseDescriptor =
-    [RKResponseDescriptor responseDescriptorWithMapping:entityMapping
+    [RKResponseDescriptor responseDescriptorWithMapping:[RMMappingProvider entityMapping]
                                                  method:RKRequestMethodGET
                                             pathPattern:@"api/get_last_updates_for_time"
                                                 keyPath:@"result"
@@ -77,7 +61,9 @@
     [self.objectManager addResponseDescriptor:responseDescriptor];
 }
 
-- (void)checkForUpdates: (NSNumber *) timestamp
+#pragma mark update functions
+
+- (void)checkUpdatesForTimestamp: (NSNumber *) timestamp
 internetConnectionError: (void (^)(void)) internetConnectionError
            code404Error: (void (^)(void)) code404Error
       noUpdatesAtServer: (void (^)(void)) noUpdatesAtServer
@@ -93,18 +79,7 @@ internetConnectionError: (void (^)(void)) internetConnectionError
                                                   
                                                   RMStatusMapping *statusMapping = [mappingResult.array objectAtIndex:0];
                                                   
-                                                  if([statusMapping.status isEqualToNumber:@400]){
-                                                      code404Error();
-                                                      return;
-                                                  }
                                                   
-                                                  if([statusMapping.result isEqual: @"full"]){
-                                                      [self getUpdates:timestamp];
-                                                  } else if([statusMapping.result isEqual: @"part"]){
-                                                      [self getUpdates:timestamp];
-                                                  } else if([statusMapping.result isEqual: @"none"]){
-                                                      noUpdatesAtServer();
-                                                  }
                                                   
                                               }
      
@@ -114,8 +89,23 @@ internetConnectionError: (void (^)(void)) internetConnectionError
     
 }
 
-- (void) getResultStatus {
+- (void)switchStatus: (RMStatusMapping *) statusMapping
+        code404Error: (void (^)(void)) code404Error
+   noUpdatesAtServer: (void (^)(void)) noUpdatesAtServer
+              update: (void (^)(void)) update
+{
+    if([statusMapping.status isEqualToNumber:@400]){
+        code404Error();
+        return;
+    }
     
+    if([statusMapping.result isEqual: @"full"]){
+        [self getUpdates:timestamp];
+    } else if([statusMapping.result isEqual: @"part"]){
+        [self getUpdates:timestamp];
+    } else if([statusMapping.result isEqual: @"none"]){
+        noUpdatesAtServer();
+    }
 }
 
 - (void) getUpdates: (NSNumber *) timestamp
@@ -126,8 +116,8 @@ internetConnectionError: (void (^)(void)) internetConnectionError
     
     [[RKObjectManager sharedManager] getObjectsAtPath:@"/api/get_last_updates_for_time"
                                            parameters:queryParams
-                                              success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {                                                  
-                                                  NSArray *entities = mappingResult.array;                                                 
+                                              success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                                  NSArray *entities = mappingResult.array;
                                               }
                                               failure:^(RKObjectRequestOperation *operation, NSError *error) {
                                                   

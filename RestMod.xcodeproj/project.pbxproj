@@ -31,6 +31,7 @@
 		7E81B5631A0772D3002221D4 /* RMDataMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E81B55E1A0772D3002221D4 /* RMDataMapping.m */; };
 		7E81B5641A0772D3002221D4 /* RMEntityMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E81B5601A0772D3002221D4 /* RMEntityMapping.m */; };
 		7E81B5651A0772D3002221D4 /* RMStatusMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E81B5621A0772D3002221D4 /* RMStatusMapping.m */; };
+		7E81B5681A07741F002221D4 /* RMMappingProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E81B5671A07741F002221D4 /* RMMappingProvider.m */; };
 		7E8305DA1A015DC5000326FD /* RMRestGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8305D91A015DC5000326FD /* RMRestGateway.m */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,8 @@
 		7E81B5601A0772D3002221D4 /* RMEntityMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMEntityMapping.m; sourceTree = "<group>"; };
 		7E81B5611A0772D3002221D4 /* RMStatusMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMStatusMapping.h; sourceTree = "<group>"; };
 		7E81B5621A0772D3002221D4 /* RMStatusMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMStatusMapping.m; sourceTree = "<group>"; };
+		7E81B5661A07741F002221D4 /* RMMappingProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMMappingProvider.h; sourceTree = "<group>"; };
+		7E81B5671A07741F002221D4 /* RMMappingProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMMappingProvider.m; sourceTree = "<group>"; };
 		7E8305D81A015DC5000326FD /* RMRestGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMRestGateway.h; sourceTree = "<group>"; };
 		7E8305D91A015DC5000326FD /* RMRestGateway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMRestGateway.m; sourceTree = "<group>"; };
 		7ECE8F57BE1EF4A8E4F0F971 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -229,6 +232,8 @@
 				7E81B55C1A0772D2002221D4 /* Models */,
 				7E8305D81A015DC5000326FD /* RMRestGateway.h */,
 				7E8305D91A015DC5000326FD /* RMRestGateway.m */,
+				7E81B5661A07741F002221D4 /* RMMappingProvider.h */,
+				7E81B5671A07741F002221D4 /* RMMappingProvider.m */,
 			);
 			path = REST;
 			sourceTree = "<group>";
@@ -394,6 +399,7 @@
 				7E81B5631A0772D3002221D4 /* RMDataMapping.m in Sources */,
 				7E81B5641A0772D3002221D4 /* RMEntityMapping.m in Sources */,
 				7E81B5651A0772D3002221D4 /* RMStatusMapping.m in Sources */,
+				7E81B5681A07741F002221D4 /* RMMappingProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
